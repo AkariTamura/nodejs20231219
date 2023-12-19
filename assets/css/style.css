@@ -1,0 +1,188 @@
+body{
+  background-image: linear-gradient(135deg, rgba(247, 93, 139, 1), rgba(254, 220, 64, 1));
+  background-size: cover;
+  width:100vw;
+  margin: 0;
+  color:#666666;
+}
+h1{
+  margin: 0;
+}
+
+.main{
+  background: #fcfcfc;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  position: relative;
+  border-radius: 10px;
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
+  linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
+  background-size: 16px 16px;
+  background-repeat: repeat;
+  background-position: center center;
+  overflow: scroll;
+  height: 92.2vh;
+}
+.mainContent{
+  padding: 2.5rem 5rem;
+  text-align: center;
+}
+.title{
+  margin-bottom:2rem;
+}
+
+.datas-wrap{
+  background:  linear-gradient(135deg, rgba(247, 93, 139, 1), rgba(254, 220, 64, 1));
+  width: 100%;
+  padding: 2px;
+  border-radius: 10px;
+  margin-bottom : 1rem;
+}
+.datas{
+  display: flex;
+  border-radius: 10px;
+  background: #fff;
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f8f8f8 calc(100% - 1px)),
+  linear-gradient(90deg, transparent calc(100% - 1px), #f8f8f8 calc(100% - 1px));
+  background-size: 16px 16px;
+  background-repeat: repeat;
+  background-position: center center;
+  padding: 1rem;
+}
+
+.key{
+  font-size: 0.8rem;
+}
+.value{
+  font-size: 1.2rem;
+}
+.dataId{
+  display: flex;
+  flex-flow: column;
+  width:10%;
+}
+.dataName{
+  display: flex;
+  flex-flow: column;
+  width:20%;
+}
+.dataMail{
+  display: flex;
+  flex-flow: column;
+  width:50%;
+}
+.dataBtn{
+  width:10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 1.6rem;
+  width: 3rem;
+  height: 2rem;
+  font-weight: bold;
+  transition: 0.3s;
+  background-image: linear-gradient(135deg, rgba(254, 170, 80, 1), rgba(254, 220, 64, 1));
+  padding:0.5rem;
+  margin-right: 0.5rem;
+}
+
+.dataBtn :hover {
+  opacity: .5;
+}
+
+.dataBtn a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.dataUpdate{
+  display:flex;
+  margin:0 auto;
+  margin-top:2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(135deg, rgba(247, 93, 139, 1), rgba(254, 220, 64, 1));
+  border-radius: 10px;
+  width:50%;
+  height:4rem;
+}
+
+.dataUpdate a{
+  color: #ffffff;
+  text-align:center;
+  text-decoration: none;
+  font-size:1.2rem;
+  font-weight: 400;
+}
+
+img{
+  width:1.6rem;
+}
+
+/* 編集ページ */
+.form_container{
+  display:flex;
+  height:100%;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.form_input {
+	position: relative;
+	width: 45%;
+	margin: 1.6rem 3%;
+}
+.form_input input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	padding-left: 1rem;
+	letter-spacing: 1px;
+	border: 0;
+}
+.form_input input[type='text']:focus {
+	outline: none;
+}
+.form_input input[type='text']:focus::after {
+	outline: none;
+}
+.form_input i {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 9px 5px;
+	transition: 0.3s;
+	color: #aaaaaa;
+}
+.form_input::after {
+	display: block;
+	width: 100%;
+	height: 4px;
+	margin-top: -1px;
+	content: '';
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: #666;
+}
+.edit_button{
+  color:#fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  width:50%;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(135deg, rgba(247, 93, 139, 1), rgba(254, 220, 64, 1));
+  border-radius: 10px;
+  height:4rem;
+  background-color: transparent;
+  border: 0px outset ButtonFace;
+}

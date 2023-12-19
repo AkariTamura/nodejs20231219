@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>User list</title>
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="mainContent">
+            <h1 class="title">データ一覧</h1>
+            <div id="userlist" class="dataContainer"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 参考例
+        // let textTag = document.getElementById('textTag');
+        // let NUMBER = `<%= number %>`;
+        // let DEMOTEXT = '<%= demotext %>'
+        // let ARRAY = '<%= array %>'
+
+        let USERS = JSON.parse('<%= JSON.stringify(users) %>'.replace(/&#34;/g, '"'));
+        let USERSlist = '';
+        for(let i = 0; i < USERS.length; i++){
+            USERSlist = USERSlist + '<div class="datas-wrap"><div class="datas"><div class="dataId"><div class="key">ID</div><div class="value">' + USERS[i].id  + '</div></div><div class="dataName"><div class="key">名前</div><div class="value">' + USERS[i].name + '</div></div><div class="dataMail"><div class="key">メールアドレス</div><div class="value">'  + USERS[i].email + '</div>';
+            USERSlist = USERSlist + '</div><div class="dataBtn"><a href="/edit/' + USERS[i].id + '"><img src="img/edit.png"></a></div><div class="dataBtn"><a href="/delete/' + USERS[i].id + '"><img src="img/delete.png"></a></div></div></div>'
+        }
+        USERSlist = USERSlist +'<div class="dataUpdate"><a href="/create">ユーザーの追加</a></div>';
+        userlist.innerHTML = USERSlist;
+    </script>
+</body>
+</html>

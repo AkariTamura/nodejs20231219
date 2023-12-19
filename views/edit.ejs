@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>User Edit</title>
+    <link type="text/css" rel="stylesheet" href="../css/reset.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="main">
+    <div class="mainContent">
+        <h1 class="title">更新フォーム</h1>
+        <form action="/update/<%= user[0].id %>" method="POST" class="form_container">
+            <div class="form_input">
+                <input type="text" placeholder="name" name="name" value="<%= user[0].name %>">
+            </div>
+            <div class="form_input">
+                <input type="text" placeholder="E-mail" name="email" value="<%= user[0].email %>">
+            </div>
+            <button class="edit_button" type="submit">更新</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
